@@ -1,0 +1,349 @@
+html {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #f7f7f7;
+    height: 100%;
+    width: 100%;
+}
+/* Navbar */
+.nav-div {
+    width: 100%;
+    padding: 22px;
+    position: relative;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.left-nav-div {
+    display: flex;
+}
+
+.menu-div {
+    margin-left: 20px;
+}
+.menu-div ul {
+    display: flex;
+ 
+}
+.menu-div ul li {
+    font-size: 18px;
+    margin-left: 30px;
+    cursor: pointer;
+    color:  #8b8888;
+    transition: 0.4s;
+}
+.menu-div ul li:hover {
+    color: black;
+
+}
+
+.up {
+    height: 6px;
+    margin-top: 5px;
+    margin-left: 4px;
+    transition: 0.4s;
+
+}
+.up.active {
+    transform: rotate(180deg);
+
+}
+
+.features-div {
+    position: relative;
+
+}
+
+.features {
+    display: inline-block;
+}
+
+.features-dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 46px;
+    left: -18px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 9px 7px 4px #dfdfdf;
+    width: 140px;
+    height: 163px;
+    display: none;
+    color: #8b8888;
+}
+.features-dropdown span {
+    cursor: pointer;
+
+}
+.features-dropdown span:hover {
+    color: black;
+}
+
+.features-dropdown.active {
+    display: block;
+}
+
+.features-dropdown img {
+    width: 14px;
+}
+
+.features-dropdown div {
+    padding: 11px;
+    padding-left: 19px;
+}
+.company-div {
+    position: relative;
+}
+.company {
+    display: inline-block;
+}
+.company-dropdown {
+    position: absolute;
+    top: 47px;
+    right: -18px;
+    background-color: white;
+    border-radius: 11px;
+    box-shadow: 10px 9px 7px 4px #dfdfdf;
+    color: #8b8888;
+    display: none;
+}
+.company-dropdown.active {
+    display: block;
+}
+
+.company-dropdown p {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+.company-dropdown p:hover {
+    color: black;
+}
+
+.right-nav-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.login-btn {
+    border: none;
+    padding: 4px;
+    font-size: 15px;
+    margin-right: 16px;
+    background-color: #f7f7f7;
+    color: #8b8888;
+    font-weight: bold;
+    cursor: pointer;
+}
+.login-btn:hover {
+    color: black;
+}
+.register-btn {
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    padding: 11px;
+    width: 90px;
+    border: 1px solid #8b8888;
+    color: #8b8888;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    color: black;
+    border: 1px solid black;
+}
+.hamburger {
+
+    position: absolute;
+    top: 31px;
+    right: 28px;
+    display: none;
+
+}
+
+
+.close {
+    position: absolute;
+    top: 31px;
+    right: 28px;
+    display: none;
+}
+
+
+/* Main Div */
+.main {
+    display: flex;
+    margin: 80px auto;
+    max-width: 1080px;
+}
+.hidden {
+    display: none;
+}
+.left-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.left-div p:nth-child(2) {
+    font-size: 80px;
+    padding-right: 50px;
+}
+
+.left-div p:nth-child(3) {
+    padding-right: 140px;
+    color: #8b8888;
+}
+
+.learn-more {
+    color: white;
+    background-color: black;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 18px;
+    width: 160px;
+    transition: 0.4s;
+}
+.learn-more:hover {
+    background-color: #f7f7f7;
+    color: black;
+    border: 1px solid black;
+
+}
+
+.clients-div {
+    display: flex;
+    justify-content: space-around;
+}
+.clients-div img {
+    height: 55%;
+}
+
+.clients-div img:nth-child(1) {
+    margin-left: -45px;
+}
+.right-div {
+    max-width: 500px;
+}
+.right-div img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .menu-div {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 200px;
+        background-color: white;
+        display: none;
+    }
+    .menu-div.active {
+        display: flex;
+    }
+    .menu-div ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .menu-div ul li {
+        padding-top: 20px;
+    }
+    .features-dropdown {
+        position: static;
+        box-shadow: none;
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+    .company-dropdown {
+        position: static;
+        box-shadow: none;
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+    .right-nav-div {
+        position: fixed;
+        bottom: 35px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+    }
+    .right-nav-div.active {
+        display: flex;
+    }
+    .login-btn {
+        background-color: white;
+        font-size: 20px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .register-btn {
+        width: 180px;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+    .hamburger.active {
+        display: none;
+    }
+    .close.active {
+        display: flex;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .left-div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 640px;
+    }
+    .hidden {
+        display: block;
+        width: 100%;
+    }
+    .right-div img {
+        display: none;
+    }
+    .left-div p:nth-child(2) {
+        margin-top: 32px;
+        font-size: 40px;
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .left-div p:nth-child(3) {
+        padding-right: 0;
+        color: #8b8888;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 20px;
+    }
+    .learn-more {
+        margin: 24px auto;
+        padding: 10px;
+    }
+    .clients-div {
+        flex-wrap: wrap;
+    }
+
+}
